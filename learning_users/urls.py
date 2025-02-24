@@ -20,7 +20,7 @@ from basic_app import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.index,name='index'),
+    path('',views.index.as_view(),name='index'),
     path('basic_app/',include('basic_app.urls')),
     path('logout/',views.user_logout,name='logout'),
     path('special/',views.something_special, name='something_special')
